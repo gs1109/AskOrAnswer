@@ -1,0 +1,39 @@
+{
+  "question_categories" : [
+    {
+      "category" : "Personal",
+      "questions": [
+        "Worst Fear",
+        "The most difficult thing you've ever done",
+        "My Proudest Moment",
+        "What you most value in a friendship",
+        "The best gift you ever received",
+        "Your 3 wishes",
+        "Least favorite mode of transportation",
+        "A new skill you’d like to have (with no effort)",
+        "Your claim to fame",
+        "You can be invisible for a day. What would you do?",
+        "A major decision",
+        "Foods you can cook",
+        "How can you make tomorrow better"
+      ]
+    },
+    {
+      "category" : "Corporate",
+      "corporate": [
+        "Worst Fear in Office",
+        "The most difficult thing you've ever done in Office",
+        "My Proudest Moment in Office",
+        "What you most value in a friendship in Office",
+        "The best gift you ever received in Office",
+        "Your 3 wishes in Office",
+        "Least favorite mode of transportation in Office",
+        "A new skill you’d like to have (with no effort) in Office",
+        "Your claim to fame in Office",
+        "You can be invisible for a day in Office. What would you do?",
+        "A major decision in Office",
+        "How can you make tomorrow better in Office"
+      ]
+    }
+  ]
+}

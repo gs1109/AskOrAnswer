@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d2704bcc56b9e43859d7e27facc6ee, type: 3}
+  m_Name: FortuneWheelSetup
+  m_EditorClassIdentifier: 
+  rewarItem:
+  - rewardSprite: {fileID: 21300000, guid: cad376d6a3469544fbeb8b775ce77874, type: 3}
+    rewardQuantity: 100
+    rewardType: 0
+  - rewardSprite: {fileID: 21300000, guid: 92b7261eb818d714cb8e0512d7602188, type: 3}
+    rewardQuantity: 250
+    rewardType: 0
+  - rewardSprite: {fileID: 21300000, guid: f4077851843cfa44fb45e79eda18c9b0, type: 3}
+    rewardQuantity: 600
+    rewardType: 0
+  - rewardSprite: {fileID: 21300000, guid: a485f974024aec945ae4511cfe6378f3, type: 3}
+    rewardQuantity: 1000
+    rewardType: 0
+  - rewardSprite: {fileID: 21300000, guid: 74b31ab12c985bd4383409ab03a64906, type: 3}
+    rewardQuantity: 2000
+    rewardType: 0
+  - rewardSprite: {fileID: 21300002, guid: c6ea92a66a12e01418183998c24a8171, type: 3}
+    rewardQuantity: 500
+    rewardType: 3
+  - rewardSprite: {fileID: 21300004, guid: c6ea92a66a12e01418183998c24a8171, type: 3}
+    rewardQuantity: 300
+    rewardType: 2
+  - rewardSprite: {fileID: 21300000, guid: c6ea92a66a12e01418183998c24a8171, type: 3}
+    rewardQuantity: 200
+    rewardType: 4
+  theme: 0
+  speed: 3
+  spinDurationMin: 1
+  spinDurationMax: 2
+  spinTurnCost: 500
+  freeTurn: 0
+  paidTurn: 1

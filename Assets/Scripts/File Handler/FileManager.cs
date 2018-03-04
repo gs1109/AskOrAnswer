@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using Pathfinding.Serialization.JsonFx;
 
@@ -23,28 +24,15 @@ public class FileManager : MonoBehaviour
 
 #region FILE_HANDLER_FOR_GENERAL_CONFIG_DATA
 	/// <summary>
-	/// 	Reads the gameplay config data from SD card into UserProfile.instance
+	/// 	Reads the gameplay config data from Resources
 	/// </summary>
-	/// <returns><c>true</c>, if level data from SD card was  read, <c>false</c> otherwise.</returns>
-	public bool readConfigDataFromSDCard()
+	/// <returns><c>true</c>, if config data from Resources, was read <c>false</c> otherwise.</returns>
+	public bool readConfigDataFromResources()
 	{
-		if(File.Exists(Application.persistentDataPath + "/" + GameConstants.GAMEPLAY_CONFIG_DATA_FILE)) 
-		{
-			// If such file exists on the SD card, then read the contents of the file
-			string encryptedLevelsDataFileContents = File.ReadAllText(Application.persistentDataPath + "/" + GameConstants.GAMEPLAY_CONFIG_DATA_FILE);
-			// Decrypt the encrypted data to get the original level data which was retrieved from the server.
-			string decryptedLevelsData = DecryptData(encryptedLevelsDataFileContents);
-			// Deserialize the original data read from the file to List<LevelData> which would be assigned to the list in LevelManager class.
-			// All further calls for the level data will be handled through LevelManager class through that list.
-			ConfigData.Instance = JsonReader.Deserialize<ConfigData>(decryptedLevelsData);
-
-			// Returns true since the file was read.
-			return true;
-		}
-		else
+		try
 		{
 			// If latest saved config data is not there....i.e. first launch in offline mode... or user deleted the file and playing in offline mode..
-			TextAsset backupConfigFile = (TextAsset)Resources.Load("configDataFile");
+			TextAsset backupConfigFile = (TextAsset)Resources.Load("questions_list");
 		
 			// If such file exists on the SD card, then read the contents of the file
 			string backupConfigDataFileContents = backupConfigFile.ToString();
@@ -52,7 +40,11 @@ public class FileManager : MonoBehaviour
 			ConfigData.Instance = JsonReader.Deserialize<ConfigData>(backupConfigDataFileContents);
 
 			return true; // and handle at the return of the function, maybe redownload the file again.
+
+		} catch(Exception e) {
+			return false;
 		}
+
 	}
 	
 	/// <summary>

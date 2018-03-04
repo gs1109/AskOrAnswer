@@ -10,9 +10,10 @@ public enum FiniteStateList
 	// IMP....Also, name the gameobject for FSM state of new states same as enum defined here
 	SplashScreenState				=  1,
 	LobbyScreenState				=  2,
-	MainGamePlayScreenState			=  4,
-	InAppsScreenState				=  8,
-	AboutScreenState				=  16
+	GameSelectionScreenState		=  4,
+	MainGamePlayScreenState			=  8,
+	InAppsScreenState				=  16,
+	AboutScreenState				=  32
 }
 
 /// <summary>
